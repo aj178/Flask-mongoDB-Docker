@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Status</title>
+</head>
+<body>
+    <h2>Input string and modified strings with timestamp</h2>
+
+    {% for item in rows %}
+        <div>{{ item }}</div>
+    {% endfor %}
+
+    <form action="/" method=["POST","GET"]>
+        <button type="submit" value="Submit">Back</button>
+    </form>
+</body>
+</html>

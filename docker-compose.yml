@@ -1,0 +1,20 @@
+version: '3.3'
+services:
+  web:
+    build: .
+    networks:
+      - Frontend_backend_com
+    links:
+      - db
+    environment:
+      - DB_URL=mongodb://db:27017
+
+  db:
+    image: mongo:4.0.4
+    networks:
+      - Frontend_backend_com
+
+networks:
+  Frontend_backend_com:
+
+
